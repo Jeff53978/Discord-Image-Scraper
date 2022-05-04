@@ -19,7 +19,7 @@ async def on_ready():
                     for attachment in message.attachments:
                         if os.path.exists(f"{os.getcwd()}\\{path}"): pass
                         else: os.mkdir(f"{os.getcwd()}\\{path}"); pass
-                        await attachment.save(f"{os.getcwd()}\\{path}\\{attachment.filename}")
-                        print(f"[*] Saved - Filename: {attachment.filename} Guild: {guild.name} Folder: {path}")
+                        await attachment.save(f"{os.getcwd()}\\{path}\\{random.randint(1000000, 9000000)}-{attachment.filename}")
+                        print(f"[*] Saved - Filename: {random.randint(1000000, 9000000)}-{attachment.filename} Guild: {guild.name} Folder: {path}")
 
 client.run(json.loads(open("config.json", "r").read())["token"])
