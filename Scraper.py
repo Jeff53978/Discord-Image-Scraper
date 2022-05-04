@@ -1,4 +1,7 @@
-import discord, os, random, json, threading
+import os, random, json, threading
+
+try: import discord
+except: os.system("pip install py-cord==2.0.0b5")
 
 client = discord.Bot()
 try: os.system("cls")
@@ -12,6 +15,7 @@ async def on_ready():
         print(f"Loaded - {guild.name}")
     print("")
     for guild in client.guilds:
+        threading.Thread().start()
         path = random.randint(1000000, 9000000)
         for channel in guild.text_channels:
             threading.Thread().start()
