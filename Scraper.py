@@ -1,4 +1,4 @@
-import os, random, json, threading, asyncio
+import os, random, json
 
 try: import discord
 except: os.system("pip install discord.py")
